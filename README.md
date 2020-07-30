@@ -25,9 +25,9 @@ yarn add eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint
 
 ## Add ESLint and Prettier to the VSCode extensions:
 
-![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/ESLint-extencion.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/ESLint-extencion.png)
+![Eslint Extension](https://github.com/oscarel/config-style-guides/blob/master/images_readme/ESLint-extencion.png?raw=true)
 
-![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/Prettier-extencion.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/Prettier-extencion.png)
+![Prettier Extension](https://github.com/oscarel/config-style-guides/blob/master/images_readme/Prettier-extencion.png?raw=true)
 
 ## Create a document at the root of your project called ".eslintrc".
 
@@ -118,11 +118,11 @@ yarn add eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint
 
 ## Add the editorconfig extension to VSCode:
 
-![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfig.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfig.png)
+![Editorconfig extension](https://github.com/oscarel/config-style-guides/blob/master/images_readme/editorconfig.png?raw=true)
 
 ## Create an editorconfig document at the root of your project:
 
-![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfigcreate.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfigcreate.png)
+![Editorconfig generate](https://github.com/oscarel/config-style-guides/blob/master/images_readme/editorconfigcreate.png?raw=true)
 
 ## Configure the created document. Replace with:
 
