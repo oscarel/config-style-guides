@@ -1,68 +1,140 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Eslint, Prettier, Editor-config and Create-react-app.
 
-## Available Scripts
+(2020/07)
 
-In the project directory, you can run:
+## Starting the project:
 
-### `yarn start`
+### With NPM, NPX and YARN:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```jsx
+npm init react-app my-app
+npx create-react-app my-app
+yarn create react-app my-app
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Add the following developer dependencies:
 
-### `yarn test`
+- eslint-config-airbnb
+- eslint-plugin-import
+- eslint-plugin-jsx-a11y
+- eslint-plugin-react
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```powershell
+yarn add eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react -D
+```
 
-### `yarn build`
+## Add ESLint and Prettier to the VSCode extensions:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/ESLint-extencion.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/ESLint-extencion.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/Prettier-extencion.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/Prettier-extencion.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Create a document at the root of your project called ".eslintrc".
 
-### `yarn eject`
+```json
+.eslintrc
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Edit the .eslintrc.json created. Place:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["import", "jsx-a11y", "react"],
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
+    "linebreak-style": "off",
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": "off",
+    "react/jsx-one-expression-per-line": "off"
+  }
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How to interact with Prettier with ESLint:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### First you must open your VSCode settings (Ctrl + Shift + p) (JSON). Right after, you must add the following command:
 
-## Learn More
+```json
+"editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For TSLint
+    "source.fixAll.tslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### * My default settings:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For TSLint
+    "source.fixAll.tslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+  },
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.rulers": [80, 120],
+  "editor.renderLineHighlight": "gutter",
+  "editor.tabSize": 2,
+  "terminal.integrated.fontSize": 14,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.parameterHints.enabled": false,
+  "breadcrumbs.enabled": true,
+  "javascript.suggest.autoImports": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  }
+}
+```
 
-### Code Splitting
+## Add the editorconfig extension to VSCode:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfig.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfig.png)
 
-### Analyzing the Bundle Size
+## Create an editorconfig document at the root of your project:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+![Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfigcreate.png](Eslint,%20Prettier,%20Editor-config%20and%20Create-react-a%205c30c7cf49a94cb682b4ee24b2121de1/editorconfigcreate.png)
 
-### Making a Progressive Web App
+## Configure the created document. Replace with:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```jsx
+root = true
 
-### Advanced Configuration
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 🎉🎉 Configuration completed successfully! 🎉🎉
