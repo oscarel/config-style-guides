@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Eslint, Prettier, Editor-config and Create-react-app.
 
 (2020/07)
@@ -138,3 +139,6 @@ insert_final_newline = true
 ```
 
 ## 🎉🎉 Configuration completed successfully! 🎉🎉
+=======
+# config-style-guides
+>>>>>>> 09ec4969302b9871fa2b1820ce956c87a150cb9b
